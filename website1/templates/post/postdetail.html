@@ -1,0 +1,14 @@
+{% extends 'base1.html' %}
+{% block content %}
+<p style="font-size: 50px; float: center; "><u>Available Posts</u></p>
+			{% for i in posts %}
+			<div class="card mb-3">
+               
+              <div class="card-body">
+                  <p>{{i.postname|capfirst }} </p> <hr>
+                  <p>{{i.post_for|capfirst}}      | {{i.lastdate}} |      {{i.post_date}}</p>
+                 
+            </div>
+        </div>
+             {% endfor %}
+{% endblock content %}

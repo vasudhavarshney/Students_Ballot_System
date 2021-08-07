@@ -1,0 +1,20 @@
+{% extends 'base1.html' %}
+{% block content %}
+
+{% if current_post %}
+    {% for question in current_post %}
+      <div class="card mb-3">
+        <div class="card-body">
+          <p class="lead"><b><u>{{ question.post | capfirst}}</u></b></p><hr>
+          <p><i>{{ question.choice_text | capfirst  }}</i><p style="float: right; font-size: 10px; color: gray;">{{ question.votes }} votes</p></p>
+     
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No Result Updates available</p>
+  {% endif %}
+
+
+
+{% endblock %}

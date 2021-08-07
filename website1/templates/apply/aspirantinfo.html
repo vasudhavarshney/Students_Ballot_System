@@ -1,0 +1,14 @@
+{% extends 'base1.html' %}
+{% block content %}
+<p style="font-size: 50px; float: center; "><u>Aspirants</u></p>
+			{% for i in applicants %}
+			<div class="card mb-3">
+               
+              <div class="card-body">
+                  <p>{{i.candidate_name|capfirst }} </p> <hr>
+                  <p>{{i.post|capfirst}}      |   {{i.year}} </p>
+                 
+            </div>
+        </div>
+             {% endfor %}
+{% endblock content %}

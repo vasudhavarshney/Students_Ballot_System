@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>asehi</title>
+</head>
+<script>
+Function getStudentsWithMarksMoreThan(marks){
+ var res=[];
+ var s={
+        "students":[
+            {
+            "roll_no":101,
+            "details":{
+                "name":"ajay",
+                "marks":42,
+                "age":20
+                }
+            },
+        {
+            "roll_no":102,
+            "details":{
+                "name":"amit",
+                "marks":45,
+                "age":21
+                }
+            },
+        {
+            "roll_no":111,
+            "details":{
+                "name":"ramesn",
+                "marks":31,
+                "age":21
+                }
+            }
+        ]};
+var i,t;
+for(i in s){
+  t=i["details"];
+  document.getElementById("demo1").innerHTML =t;
+        if(t["marks"]>marks){
+            res.push(i);
+        }
+    
+}
+  return res;
+}
+document.getElementById("demo").innerHTML = getStudentsWithMarksMoreThan(40);
+</script>
+<body>
+<p id="demo1"></p>
+<p id="demo"></p>
+
+</body>
+</html>
